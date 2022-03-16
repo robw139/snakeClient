@@ -9,10 +9,12 @@ const connect = function () {
   conn.on("connect", (data) => {
     // code that does something when the connection is first established
     console.log("we have connected");
+    conn.write('Name: ROB');
   });
   conn.on("data", (data) => {
     // code that does something when the connection is first established
     console.log(data);
+    
   });
 
 
