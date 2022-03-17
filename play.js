@@ -26,27 +26,28 @@ const net = require("net");
 // };
 
 const connect = require("./client")
+const {setupInput, handleUserInput} = require("./input")
 
 console.log("Connecting ...");
 connect();
 
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  return stdin;
-};
+// const setupInput = function () {
+//   const stdin = process.stdin;
+//   stdin.setRawMode(true);
+//   stdin.setEncoding("utf8");
+//   stdin.resume();
+//   return stdin;
+// };
 
-const handleUserInput = function (key) {
-  // your code here
+// const handleUserInput = function (key) {
+//   // your code here
 
-    process.stdout.write('.');
+//     process.stdout.write('.');
   
-  if (key === '\u0003') {
-    process.exit();
-  }
-};
+//   if (key === '\u0003') {
+//     process.exit();
+//   }
+// };
 
 const d = setupInput();
 
