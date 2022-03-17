@@ -10,6 +10,11 @@ const connect = function () {
     // code that does something when the connection is first established
     console.log("we have connected");
     conn.write('Name: ROB');
+    setTimeout(()=> {conn.write("Move: up")},  1000 );
+    setTimeout(()=> {conn.write("Move: right")},  2000 );
+    setTimeout(()=> {conn.write("Move: up")},  3000 );
+    setTimeout(()=> {conn.write("Move: left")},  4000 );
+    
   });
   conn.on("data", (data) => {
     // code that does something when the connection is first established
